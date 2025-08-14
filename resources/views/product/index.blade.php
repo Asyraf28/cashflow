@@ -45,8 +45,7 @@
                     @forelse ($products as $product)
                         <tr>
                             <td>
-                                <img src="{{ Storage::url($product->image) }}" alt="{{ $product->name }}"
-                                    class="w-thumbnail img-thumbnail">
+                                <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->name }}" class="w-thumbnail img-thumbnail">
                             </td>
                             <td>{{ $product->name }}</td>
                             <td>{{ $product->category->name }}</td>
